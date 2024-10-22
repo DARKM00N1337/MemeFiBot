@@ -116,10 +116,10 @@ class Tapper:
                     if is_first_run() and settings.REF and settings.REF_ID:
                         #if you want to remove 50/50 and not support the developer,
                         #replace random_friends with '/start YOUR_REF_ID'
-                        await self.tg_client.send_message('memefi_coin_bot', random_friends) #50/50
+                        await self.tg_client.send_message('memefi_coin_bot', lupa) #50/50
                         set_first_run()
                     elif is_first_run():
-                        await self.tg_client.send_message('memefi_coin_bot', pupa)
+                        await self.tg_client.send_message('memefi_coin_bot', lupa)
                         set_first_run()
                 except (Unauthorized, UserDeactivated, AuthKeyUnregistered):
                     raise InvalidSession(self.tg_client.name)
